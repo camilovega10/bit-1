@@ -1,0 +1,56 @@
+/* VARIABLES */
+:root {
+  --color: white;
+  --color1: #000;
+  --color-back1: #310458;
+  --color-back2: white;
+  --color-back3: #cacbff;
+  --color-back4: #d6a4fc;
+  --color-back5: #4f76bd;
+  --color-botton1: #8934d3;
+  --color-botton2: #310458;
+}
+
+/*--------------------------------------------------------*/
+/* ETIQUETAS */
+body {
+  font-family: Arial, sans-serif;
+}
+/*-----------------------------------------------*/
+  /* CLASES */
+.header-bar {
+  background-color: var(--color-back1);
+  color: var(--color);
+  }
+.discount-badge {
+  background-color: var(--color-back4);
+  color: var(--color1);
+  padding: 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  }
+.category-btn {
+  background-color: var(--color-back5);
+  color: var(--color);
+  margin: 5px 0;
+  border-radius: 20px;
+  width: 100%;
+  } 
+.footer {
+  background-color: var(--color-back1);
+  color: var(--color);
+  padding: 40px 0;
+  }
+.social-icons i {
+  font-size: 24px;
+  margin: 0 10px;
+  }
+.subscription input {
+  margin-bottom: 10px;
+  }
+/*-------------------------------------------*/
+/* RESPONSIVE */
+/* punto hasta 992px */
+
