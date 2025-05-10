@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+</head>
+<body>
+<noscript>JavaScript is mandatory</noscript>
+<header>
+  <h2 class="text-center fw-bold mb-4">Formulario de registro</h2>
+</header>
+
+<main class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      
+      <form>
+        <div class="mb-3">
+          <label for="correo" class="form-label">Correo:</label>
+          <input type="email" class="form-control bg-light border-0" id="correo" placeholder="Tu dirección de email correo@gmail.com" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Crontaseña:</label>
+          <input type="password" class="form-control bg-light border-0" id="password" placeholder="Contraseña debe de incluir mínimo 8 caracteres entre ellos números y letras." required>
+        </div>
+        <div class="mb-3">
+          <label for="confirmar" class="form-label">Confirmar Crontaseña:</label>
+          <input type="password" class="form-control bg-light border-0" id="confirmar" placeholder="Contraseña debe de incluir mínimo 8 caracteres entre ellos números y letras." required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary me-2 px-4 rounded-pill" style="background-color: #3d0074; border: none;">Crear</button>
+          <button type="reset" class="btn btn-secondary px-4 rounded-pill" style="background-color: #3d0074; border: none;">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/script.js"></script>
+</body>
+</html>

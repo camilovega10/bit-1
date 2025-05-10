@@ -1,219 +1,69 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!--<link rel="stylesheet" href="./css/style.css">-->
-  <link rel="shortcut icon" href="./assets/iconopagina.enc" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <title>LU´CAM</title>
-  
-  <style>
-    body { margin: 0; font-family: Arial, sans-serif; }
-    header, footer, aside, main { padding: 10px; }
-    header { background-color: #3d0074; color: white; }
-    .descuentos { background-color: #e5d7f3; border-radius: 10px; text-align: center; padding: 10px; margin-bottom: 10px; }
-    .categoria-btns .btn { width: 100%; margin: 5px 0; }
-    footer { background-color: #3d0074; color: white; padding-top: 20px; }
-    .footer-section { margin-bottom: 20px; }
-    .footer-section h5 { border-bottom: 1px solid white; padding-bottom: 5px; }
-    .social-icons i { font-size: 1.5rem; margin: 0 10px; }
-    .suscribe input, .suscribe select, .suscribe button { margin: 5px 0; }
-    .carousel-inner img { width: 100%; height: auto; }
-    /*#carouselMain {width: 380px; height: 30px;}*/
-  </style>
-</head>
-<body>
-    <noscript>JavaScript is mandatory</noscript>
-  <div class="container-fluid p-0">
-
-    <!-- HEADER -->
-    <header class="d-flex justify-content-between align-items-center p-3">
-      <div class="d-flex align-items-center">
-        <img src="./assets/iconopagina.enc" alt="Logo" class="me-2" style="width: 40px; height: 40px; border-radius: 50%;">
-        <h4 class="m-0">LU´CAM</h4>
-      </div>
-      <!-- Bootstrap Navbar Responsive-Navegacion -->
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <noscript>JavaScript is mandatory.</noscript>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="menu">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#">Iniciar sesión</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Bolsa de compras</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Favoritos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Ayuda</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Moneda</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Top Row -->
-    <div class="row m-0">
-      <!-- ASIDE 1 -->
-      <aside class="col-md-2">
-        <div class="descuentos"><img src="./assets/icono.PNG" alt="Descuento" style="width: 30px; height: 30px;">-60%<br><small>en pedido de + COP1’000.000</small></div>
-        <div class="descuentos"><img src="ruta/imagen.png" alt="Descuento" style="width: 30px; height: 30px;">-25%<br><small>en pedido de + COP400.000</small></div>
-        <div class="descuentos"><img src="ruta/imagen.png" alt="Descuento" style="width: 30px; height: 30px;">-10%<br><small>en pedido de + COP250.000</small></div>
-      </aside>
-
-      <!-- MAIN -->
-      <main class="col-md-8">
-        <img src="./assets/catalogo/pag1.PNG" class="img-fluid d-block mx-auto" alt="...">
-        <!-- Carrusel principal -->
-        <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="d-flex justify-content-around">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex justify-content-around">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-
-        <!-- Carrusel secundario -->
-        <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="d-flex justify-content-around">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="d-flex justify-content-around">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-                <img src="https://via.placeholder.com/150" class="d-block">
-              </div>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </button>
-        </div>
-      </main>
-
-      <!-- ASIDE 2 -->
-      <aside class="col-md-2 categoria-btns text-center">
-        <h5>Categoría</h5>
-        <button class="btn btn-primary">Mujer</button>
-        <button class="btn btn-primary">Hombre</button>
-        <button class="btn btn-primary">Niños</button>
-        <button class="btn btn-primary">Bebes</button>
-        <button class="btn btn-primary">Lencería</button>
-        <button class="btn btn-primary">Deportivo</button>
-        <button class="btn btn-primary">Línea Playa</button>
-      </aside>
-    </div>
-
-    <!-- Bottom Row -->
-    <div class="row m-0">
-      <!-- ASIDE 3 -->
-      <aside class="col-md-6">
-        <h4>¿Quiénes Somos?</h4>
-        <p>
-            LU´CAM es una tienda online global de moda y estilo de vida que nace con la misión de hacer que la belleza de la moda esté al alcance de todos. Nuestro objetivo es ofrecer prendas y accesorios que reflejen las últimas tendencias internacionales, sin comprometer la accesibilidad ni la sostenibilidad.
-        </p>
-        <p>
-            Apostamos por un modelo de negocio inteligente que reduce el desperdicio de inventario, permitiéndonos operar de manera más eficiente y responsable con el medio ambiente. Esta estrategia no solo minimiza el impacto ecológico, sino que también nos permite ofrecer una amplia gama de productos a precios asequibles, sin sacrificar la calidad ni el estilo.
-        </p>
-        <p>
-            En LU´CAM, creemos que la moda no debería tener fronteras. Por eso, trabajamos para llevar nuestras colecciones a clientes de todo el mundo, celebrando la diversidad y adaptándonos a las distintas culturas y estilos de vida. Cada artículo en nuestra tienda está cuidadosamente seleccionado para inspirar confianza, comodidad y autenticidad.Únete a la comunidad LU´CAM y descubre cómo la moda puede ser accesible, consciente y global.
-        </p>
-      </aside>
-
-      <!-- ASIDE 4 -->
-      <aside class="col-md-6">
-        <h5>Suscribete para recibir ofertas exclusivas, Promosiones y noticias de LU´CAM</h5>
-        <form class="suscribe">
-          <input type="email" class="form-control" placeholder="Tu dirección de email">
-          <div class="input-group">
-            <select class="form-select" style="max-width: 120px;">
-              <option selected>CO +57</option>
-              <option selected>ARG +54</option>
-              <OPtion selected>USA +1</OPtion>
-            </select>
-            <input type="text" class="form-control" placeholder="Tu número para SMS">
-          </div>
-          <button class="btn btn-primary w-100">Continuar</button>
-
-          <div class="input-group mt-2">
-            <select class="form-select" style="max-width: 120px;">
-              <option selected>CO +57</option>
-              <option selected>ARG +54</option>
-              <OPtion selected>USA +1</OPtion>
-            </select>
-            <input type="text" class="form-control" placeholder="Cuenta de WhatsApp">
-          </div>
-          <button class="btn btn-primary w-100 mt-1">Continuar</button>
-        </form>
-      </aside>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="text-center">
-      <div class="row">
-        <div class="col-md-4 footer-section">
-          <h5>Ayuda y Apoyo</h5>
-          <ul class="list-unstyled">
-            <li>Información de Envío</li>
-            <li>Devolución</li>
-            <li>Reembolso</li>
-            <li>Cómo Realizar El Pedido</li>
-            <li>Rastrear El Pedido</li>
-            <li>Guía de Tallas</li>
-          </ul>
-        </div>
-        <div class="col-md-4 footer-section">
-          <h5>Encuéntranos en</h5>
-          <div class="social-icons">
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-facebook"></i>
-            <i class="bi bi-tiktok"></i>
-          </div>
-        </div>
-        <div class="col-md-4 footer-section">
-          <h5>Servicio al Cliente</h5>
-          <ul class="list-unstyled">
-            <li>Contáctenos</li>
-            <li>Forma De Pago</li>
-            <li>Puntos</li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="contact.html">Contact</a>
+            </li>
           </ul>
         </div>
       </div>
-      <p class="mt-4">©2023-2025 LU´CAM Todos los derechos reservados</p>
-      <p class="small">Centro de Privacidad | Política de privacidad y cookies | Reglas de IP | Aviso de copyright</p>
-      <div>
-        <img src="https://via.placeholder.com/300x50" alt="Métodos de pago" class="img-fluid">
+    </nav>
+    <h1>Contact</h1>
+    <form id="form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" name="name" />
       </div>
-    </footer>
-
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/script.js"></script>
-</body>
-</html> 
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="message"
+          rows="3"
+          name="message"
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
