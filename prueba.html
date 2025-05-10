@@ -1,265 +1,309 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camilo Vega</title>
-    <link rel="shortcut icon" href="./assets/icono.PNG" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LU'CAM</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #000;
+    }
+
+    header {
+      background-color: #3b0066;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1rem;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    .search-bar {
+      display: flex;
+      margin: 1rem auto;
+      justify-content: center;
+    }
+
+    .search-bar input {
+      width: 300px;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+    }
+
+    .search-bar button {
+      padding: 0.5rem 1rem;
+      background-color: #3b0066;
+      color: white;
+      border: none;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .main-banner {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+
+    .main-banner img {
+      width: 90%;
+      max-width: 700px;
+      border: 2px solid #3b0066;
+    }
+
+    .side-discounts {
+      position: absolute;
+      left: 0;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .side-discounts div {
+      background-color: #d2b6f2;
+      color: #000;
+      padding: 1rem;
+      border-radius: 20px;
+      font-size: 14px;
+      text-align: center;
+      width: 150px;
+    }
+
+    .categories {
+      position: absolute;
+      right: 0;
+      top: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .categories button {
+      background-color: #5a78d1;
+      color: white;
+      border: none;
+      padding: 0.5rem;
+      border-radius: 10px;
+      width: 100px;
+      cursor: pointer;
+    }
+
+    .offers-section {
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .offers-carousel {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+
+    .offers-carousel img {
+      height: 200px;
+      scroll-snap-align: start;
+    }
+
+    .footer {
+      background-color: #3b0066;
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .footer div {
+      margin: 1rem;
+    }
+
+    .footer a {
+      color: white;
+      display: block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+    }
+
+    .subscribe {
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .subscribe input {
+      margin: 0.5rem;
+      padding: 0.5rem;
+      width: 250px;
+    }
+
+    .subscribe button {
+      background-color: #5a78d1;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 992px) {
+      .side-discounts,
+      .categories {
+        display: none;
+      }
+
+      nav ul {
+        flex-direction: column;
+        background-color: #3b0066;
+        width: 100%;
+        display: none;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .toggle-menu {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: 993px) {
+      .toggle-menu {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-<!--cabecera-->
-    <header  class="color-fondo">
-        <div class="img-principal"><img src="./assets/icono.PNG" alt="icono de la pagina" width="60" height="60">
-            <h1>Cristian Camilo Vega Parra</h1>
-        </div>
-        <nav class="menu-1">
-            <a href="#pelicula-f">Pelicula favorita</a>
-            <a href="#cancion-f">Cancion favorita</a>
-            <a href="#comida-f">Comida favorita</a>
-            <a href="./contactame.html" target="_blank" rel="noopener noreferrer">Contactame</a>
-        </nav>
-    </header>
-<!--main-->
-    <main>
-        <section>
-            <h3 class="centrar-texto">Sobre Mi</h3>
-            <p>
-                Soy una persona profundamente apasionada por el fútbol, los autos y todo aquello que implique un desafío que me permita crecer personal y profesionalmente. El fútbol me ha enseñado el valor del trabajo en equipo, la importancia de la estrategia y el compromiso constante; los autos, por otro lado, despiertan en mí una mezcla de admiración por la ingeniería, la velocidad y la evolución tecnológica, además de representar una forma de libertad y superación.
-            </p>
-            <p>
-                Lo que realmente me motiva es emprender en cosas nuevas, no solo por el conocimiento que se gana en el camino, sino por la experiencia misma de enfrentar lo desconocido. Disfruto de los retos personales porque son los que me impulsan a salir de mi zona de confort y me permiten descubrir de lo que realmente soy capaz.
-            </p>
-            <p> 
-                Para mí, la disciplina es uno de los pilares más sólidos de mi vida. Estoy convencido de que el talento por sí solo no basta; sin esfuerzo, constancia y dedicación, los sueños se quedan en ideas. Por eso, cada día trabajo en ser mejor, en pulir mis habilidades y en construir un camino firme hacia mis metas.
-            </p>
-            <p>  
-                Siempre estoy en la búsqueda de nuevas oportunidades para aprender, crecer y demostrarme a mí mismo que, con determinación, enfoque y pasión, no hay límites que no puedan romperse. Creo firmemente que cada paso, por pequeño que sea, suma en el camino hacia la grandeza personal.
-            </p>
-            <img class="img-mostrario" src="./assets/img-aventura.webp" alt="Paisaje representado la aventura">
-        </section>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="LU'CAM logo">
+      <h1>LU´CAM</h1>
+    </div>
+    <div class="toggle-menu" onclick="document.querySelector('nav ul').classList.toggle('show')">
+      <i class="bi bi-list" style="font-size: 2rem;"></i>
+    </div>
+    <nav>
+      <ul>
+        <li>Iniciar sesión</li>
+        <li>Bolsa de compras</li>
+        <li>Favoritos</li>
+        <li>Ayuda</li>
+        <li>Moneda</li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-            <h3 class="centrar-texto" id="pelicula-f">Pelicula favorita</h3>
-            <h4>La vida es bella (La vita è bella, 1997)</h4>
-            <p>
-                La historia sigue a Guido, un hombre alegre y optimista que conquista a Dora, una maestra con la que se casa y tiene un hijo llamado Giosuè. Su vida da un giro cuando, durante la ocupación nazi, son deportados a un campo de concentración por ser judíos.
-            </p>
-            <p>
-                Para proteger a su hijo del horror de la guerra, Guido le hace creer que todo es un juego, donde deben seguir ciertas reglas para ganar un tanque como premio. A pesar de las condiciones terribles, Guido mantiene el ánimo y la imaginación viva para evitar que su hijo pierda la esperanza.
-            </p>
-            <p>
-                La película muestra la fuerza del amor, la imaginación y el sacrificio. A pesar de su trágico final, deja un mensaje poderoso sobre la belleza de la vida incluso en medio del sufrimiento.
-            </p>
+  <div class="search-bar">
+    <input type="text" placeholder="Vestidos..">
+    <button><i class="bi bi-search"></i></button>
+  </div>
 
-            <iframe class="videos" src="https://www.youtube.com/embed/e-Z062tRdbQ?si=hh1TXDr686VNCh0z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
+  <div class="side-discounts">
+    <div>-60%<br>en pedido de +<br>COP1'000.000</div>
+    <div>-25%<br>en pedido de +<br>COP400.000</div>
+    <div>-10%<br>en pedido de +<br>COP250.000</div>
+  </div>
 
-        <section>
-            <h3 class="centrar-texto" id="cancion-f">Cancion Favorita</h3>
-            <h4>Porqué la envidia (Yeison Jiménez)</h4>
-            <p>
-                es una canción del cantante colombiano Yeison Jiménez, lanzada en 2015. En ella, el artista reflexiona sobre las críticas y comentarios negativos que ha recibido debido a su éxito. Jiménez expresa que, aunque pueda cometer errores, no merece ser juzgado de manera despiadada. Destaca las dificultades y sacrificios que ha enfrentado para alcanzar sus logros, incluyendo noches enteras rezando y pidiendo ayuda a Dios. La canción también aborda cómo la envidia puede humillar y molestar a quienes la sienten, especialmente cuando ven triunfar a una persona humilde.
-            </p>
-            <audio class="audios" src="./assets/Porqué la envidia (Yeison Jiménez) - Vídeo Oficial - Música Popular.mp3" controls></audio>
-        </section>
+  <div class="main-banner">
+    <img src="banner.jpg" alt="Tu look perfecto te espera">
+  </div>
 
-        <section>
-            <h3 class="centrar-texto" id="comida-f">Comida favorita</h3>
-            <h4>Bandeja paisa</h4>
-            <p>Me encanta prepararla de la siguiente forma:</p>
-            <img class="img-secundaria" src="./assets/img-bandeja-paisa.jfif" alt="Imgen de bandeja paisa" height="100px">
-            <h4>Utencilios:</h4>
-            <ol> 
-                <li>Olla a presión</li>
-                <li>Sartén</li>
-                <li>Cuchara</li>
-                <li>Licuadora</li>
-            </ol>
-            <h4>Ingredientes</h4>
-            <ul>
-                <li>1 1/2 cucharadas de aceite (21 g)</li>
-                <li>2 tallos de cebolla larga finamente picada (30 g)</li>
-                <li>2 tomates maduros sin piel y finamente picados (240 g)</li>
-                <li>1 sobre de CALDO CON COSTILLA MAGGI® DESMENUZADO (9 g)</li>
-                <li>3 tazas de agua (750 ml)</li>
-                <li>1/2 libra de fríjoles bola roja remojados desde la noche anterior (250 g)</li>
-                <li>1 zanahoria mediana, entera y pelada (140 g)</li>
-                <li>1/4 libra de carne molida magra (125 g)</li>
-                <li>1/2 libra de arroz blanco cocinado (250 g)</li>
-                <li>1/4 de libra de tocino crocante cortado en 4 porciones (125 g)</li>
-                <li>4 chorizos tipo coctel previamente cocinados y dorados (120 g)</li>
-                <li>4 huevos fritos (200 g)</li>
-                <li>1 aguacate partido en 4 porciones (110 g)</li>
-                <li>4 arepas pequeñas redondas (80 g)</li>
-                <li>4 tajadas de plátano maduro fritas (80 g)</li>
-            </ul>
-            <h4>Preparacion</h4>
-            <ol>
-                <li>Calienta en una olla a presión una cucharada de aceite por 3 minutos a fuego medio; añade la cebolla, el tomate y el sobre de CALDO CON COSTILLA MAGGI® DESMENUZADO y revuelve para integrar bien, finalmente cocina por 2 minutos o hasta que el tomate suelte sus jugos.</li>
-                <li>Adiciona las tres tazas de agua, los fríjoles y la zanahoria entera. Tapa la olla y cocina por 30 minutos.</li>
-                <li>Pasado el tiempo de cocción retira la olla del fuego, sácale el aire con cuidado antes de destapar.</li>
-                <li>Saca la zanahoria y licúa con el caldo de los fríjoles.</li>
-                <li>Agrega el licuado a la olla nuevamente para espesar, lleva a fuego bajo y revuelve de vez en cuando.</li>
-                <li>Calienta en una sartén el aceite restante por 3 minutos a fuego medio. Agrega la carne y con una cuchara revuelve, debes dejar cocinar por 10 minutos o hasta que este bien cocinada.</li>
-                <li>En una olla de fondo alto agrega 2 tazas de agua y el tocino cortado en trozos; tapa la olla y lleva al fuego medio por 20 minutos o hasta que el tocino esté bien cocinado y crocante. Retira del fuego y déjalos en papel absorbente para retirar el exceso de grasa.</li>
-                <li>En una sartén pequeña adicionar dos cucharadas de agua y los chorizos. Lleva a fuego medio hasta que los chorizos estén bien dorados.</li>
-                <li>En una parrilla o sartén a fuego medio debes poner las arepas y dorar por ambos lados.</li>
-                <li>En 4 bandejas o 4 platos sirve arroz, fríjoles, carne molida, chicharrón, chorizo, huevo, aguacate, arepa y 1 tajada de plátano maduro, todo en porciones iguales.</li>
-            </ol>
+  <div class="categories">
+    <button>Mujer</button>
+    <button>Hombre</button>
+    <button>Niños</button>
+    <button>Bebés</button>
+    <button>Lencería</button>
+    <button>Deportivo</button>
+    <button>Línea Playa</button>
+  </div>
 
-        </section>
-    </main>
-<!--aside-->
-    <aside>
-        <img class="img-inicio" src="./assets/egipcio.jpg" alt="El ojo que todo lo ve">
-        <h3 class="centrar-texto">Perfil profesional</h3>
-        <p>
-            Apasionado por la tecnología y la gestión de proyectos tecnológicos, con experiencia en la coordinación de equipos y la 
-            implementación de soluciones innovadoras. Enfocado en la planificación, supervisión y optimización de infraestructuras tecnológicas, asegurando 
-            su alineación con los objetivos estratégicos de la organización. Estoy en constante aprendizaje y abierto a nuevos desafíos que me permitan seguir 
-            creciendo profesional y personalmente.
-        </p>
-        <!--Primera tabla-->
-        <h3 class="centrar-texto">Formacion Academica</h3>
-        <table border="2">
-            <thead>
-              <tr>
-                <th>Titulo</th>
-                <th>Entidad certificadora</th>
-                <th>Año de grado</th>
-                <th>Estado actual</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Tecnico en sistemas</td>
-                <td>CUN</td>
-                <td>2020</td>
-                <td>Completado</td>
-              </tr>
-              <tr>
-                <td>Tecnologo en desarrollo y redes</td>
-                <td>CUN</td>
-                <td>2022</td>
-                <td>Completado</td>
-              </tr>
-              <tr>
-                <td>Ingeniero de Sistemas</td>
-                <td>CUN</td>
-                <td>2023</td>
-                <td>Completado</td>
-              </tr>
-              <tr>
-                <td>Gerencia de proyectos</td>
-                <td>UDEMY</td>
-                <td>2024</td>
-                <td>Completado</td>
-              </tr>
-              <tr>
-                <td>Bootcamp de desarrolo FullStack</td>
-                <td>BIT</td>
-                <td>2025</td>
-                <td>En proceso</td>
-              </tr>
-            </tbody>
-          </table>
-          <hr>
-        <!--Segunda tabla-->
-        <h3 class="centrar-texto">Experiencia Laboral</h3>
-        <table border="2">
-            <thead>
-            <tr>
-                <th>Rol</th>
-                <th>Empresa</th>
-                <th>Fecha</th>
-                <th>Estado</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Gestor de proyectos</td>
-                <td>Oesia</td>
-                <td>Abr 2025</td>
-                <td>Activo</td>
-            </tr>
-            <tr>
-                <td>Lider de mesa de servicio</td>
-                <td>Yeapdata</td>
-                <td>Feb 2025</td>
-                <td>Retirado</td>
-            </tr>
-            <tr>
-                <td>Ingeniero de implementacion y soporte N2</td>
-                <td>Yeapdata</td>
-                <td>Dic 2023</td>
-                <td>Retirado</td>
-            </tr>
-            <tr>
-                <td>Lider de telefonia</td>
-                <td>Outsourcing</td>
-                <td>Jun 2023</td>
-                <td>Retirado</td>
-            </tr>
-            <tr>
-                <td>Ingeniero de telefonia</td>
-                <td>Outsourcing</td>
-                <td>Feb 2020</td>
-                <td>Retirado</td>
-            </tr>
-            <tr>
-                <td>Tecnico Help-Desk</td>
-                <td>Outsourcing</td>
-                <td>Jun 2018</td>
-                <td>Retirado</td>
-            </tr>
-            </tbody>
-         </table>
-         <hr>
-         <h3 class="centrar-texto">Fotalezas</h3>
-        <table border="2">
-            <thead>
-            <tr>
-                <th>Tipo de fortaleza</th>
-                <th>Descripcion</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>Trabajo en equipo</td>
-                <td> Disfruto colaborar con diferentes perfiles 
-                    profesionales, fomentando un ambiente 
-                    de trabajo productivo y armonioso.</td>
-            </tr>
-            <tr>
-                <td>Capacidad de aprendizaje rápido</td>
-                <td>Me adapto con facilidad a nuevas 
-                    tecnologías y metodologías de trabajo, 
-                    manteniéndome en constante formación</td>
-            </tr>
-            <tr>
-                <td>Proactividad</td>
-                <td> Busco constantemente oportunidades de 
-                    mejora e innovación dentro de mi área 
-                    de trabajo.</td>
-            </tr>
-            </tbody>
-         </table>
-         <hr>
-         <h3 class="centrar-texto">Habilidades</h3>
-            <ul>
-                <li>Administración Y Optimización De Herramientas ITSM </li>
-                <li>Diagnóstico Y Resolución De Incidentes Tecnológicos</li>
-                <li>Soporte En Infraestructura De TI</li>
-                <li>Gestión De Bases De Conocimiento Y Documentación Técnica</li>
-                <li>Automatización De Procesos Y Mejora Continua</li>
-            </ul>
-    </aside>
+  <section class="offers-section">
+    <h2>Super ofertas</h2>
+    <div class="offers-carousel">
+      <img src="oferta1.jpg" alt="Oferta 1">
+      <img src="oferta2.jpg" alt="Oferta 2">
+      <img src="oferta3.jpg" alt="Oferta 3">
+      <img src="oferta4.jpg" alt="Oferta 4">
+      <img src="oferta5.jpg" alt="Oferta 5">
+    </div>
+  </section>
 
-<!--Pie de pagina-->
-    <footer class="color-fondo">
-        <p>Esta página se editó por última vez el 4 abril 2025 a las 21:00. &copy; Bogota Colombia, <address>Calle 63 con carrer 64</address></p>
-    </footer>
-   
+  <section class="subscribe">
+    <h3>¿Quiénes Somos?</h3>
+    <p>LU’CAM es una tienda online global de moda y estilo de vida comprometido con hacer que la belleza de la moda sea accesible a todo el mundo...</p>
+    <input type="email" placeholder="Tu direccion de email correo@gmail.com">
+    <button>Continuar</button><br>
+    <input type="text" placeholder="Tu número de teléfono para SMS">
+    <button>Continuar</button><br>
+    <input type="text" placeholder="Cuenta de WhatsApp">
+    <button>Continuar</button>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h4>Ayuda y Apoyo</h4>
+      <a href="#">Información de Envío</a>
+      <a href="#">Devolución</a>
+      <a href="#">Reembolso</a>
+      <a href="#">Cómo Realizar El Pedido</a>
+      <a href="#">Rastrear El Pedido</a>
+      <a href="#">Guía De Tallas</a>
+    </div>
+    <div>
+      <h4>Encuéntranos en:</h4>
+      <i class="bi bi-instagram"></i>
+      <i class="bi bi-whatsapp"></i>
+      <i class="bi bi-facebook"></i>
+      <i class="bi bi-tiktok"></i>
+    </div>
+    <div>
+      <h4>Servicio al Cliente</h4>
+      <a href="#">Contáctenos</a>
+      <a href="#">Forma De Pago</a>
+      <a href="#">Puntos</a>
+    </div>
+    <div>
+      <h4>Aceptamos</h4>
+      <img src="tarjetas.png" alt="Métodos de pago" style="max-width: 200px;">
+    </div>
+  </footer>
 </body>
 </html>

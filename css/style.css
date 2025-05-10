@@ -50,6 +50,21 @@ body {
 .subscription input {
   margin-bottom: 10px;
   }
+.search-btn {
+      background: radial-gradient(circle, #69d2e7 50%, #8e44ad 100%);
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.social-icons i {
+      font-size: 24px;
+      margin: 0 10px;
+}
 /*-------------------------------------------*/
 /* RESPONSIVE */
 /* punto hasta 992px */
