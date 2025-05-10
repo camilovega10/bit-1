@@ -1,20 +1,32 @@
 'use strict';
+document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.getElementById("registroForm");
 
-/*validacion del formulario de registro*/
-document.getElementById('registroForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Revisa campos antes de que se envie
+  formulario.addEventListener("submit", function (event) {
+    event.preventDefault(); // Evita el envío automático del formulario
 
-    const name = document.getElementById('name').value.trim();
-    const correo = document.getElementById('correo').value.trim();
+    const nombre = document.getElementById("name").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const contraseña = document.getElementById("password").value.trim();
+    const confirmar = document.getElementById("confirmar").value.trim();
 
-    if (name && message) {
-      const result = `${name}, gracias por tu registro con el correo: "${correo}". ya puedes iniciar sesion desde la opcion en la pagina principal, donde tu usuario es tu correo y la contraseña que acabas de crear`;
-      alert(result);
-      this.reset(); // Limpiar formulario
-    } else {
-      alert("Por favor completa todos los campos obligatorios.");
+    // Verificar que todos los campos estén completos
+    if (!nombre || !correo || !contraseña || !confirmar) {
+      alert("Por favor, completa todos los campos.");
+      return;
     }
+
+    // Validar que las contraseñas coincidan
+    if (contraseña !== confirmar) {
+      alert("Las contraseñas no coinciden.");
+      return;
+    }
+
+    // Mostrar alerta si todo está correcto
+    alert("Registro exitoso. ¡Bienvenido/a " + nombre + "! ahora podras disfrutar de los mejores precios y la mejor calidad, ¡Recuerda que tu usuario es el correo y la contraseña es la que acabas de crear!");
+    formulario.reset(); // Limpia el formulario después de enviar
   });
+});
 
 
 
